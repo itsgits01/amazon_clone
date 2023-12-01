@@ -46,7 +46,7 @@ mongoose.connect(DB).then(()=>{
 //     res.json({name:'Gitesh K. Ambre'}) 
 // });
  
-app.listen(PORT,()=>{
+app.listen(PORT,'0.0.0.0',()=>{
     console.log(`connected at port ${PORT}`);
 });
   
