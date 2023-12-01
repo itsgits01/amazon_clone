@@ -18,6 +18,11 @@ const app= express();
 const DB="mongodb+srv://gitesh:gitesh123@cluster0.q5r7agp.mongodb.net/?retryWrites=true&w=majority";
 
 //middle ware in client->server->client
+app.get('/', (req,res)=>{
+    res.send({
+        api:"success"
+    })
+})
 app.use(express.json());
 app.use(cors());
 app.use(authRouter);
