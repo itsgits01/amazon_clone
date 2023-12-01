@@ -12,6 +12,9 @@ const adminRouter = require('./routes/admin');
 const productRouter = require('./routes/product');
 const userRouter = require('./routes/user');
 
+
+const dotenv = require('dotenv');
+dotenv.config();
 //intialistn
 const PORT=process.env.PORT || 3000;
 const app= express();
