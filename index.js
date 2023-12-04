@@ -5,7 +5,7 @@
 const express= require('express');
 const mongoose= require('mongoose');
 
-// const cors = require('cors');
+//const cors = require('cors');
 //imports from the files
 const authRouter= require("./routes/auth");
 const adminRouter = require('./routes/admin');
@@ -21,13 +21,13 @@ const app= express();
 const DB="mongodb+srv://gitesh:gitesh123@cluster0.q5r7agp.mongodb.net/?retryWrites=true&w=majority";
 
 //middle ware in client->server->client
-app.get('/', (req,res)=>{
+app.get('/api', (req,res)=>{
     res.send({
         api:"success"
     })
 })
 app.use(express.json());
-// app.use(cors());
+//app.use(cors());
 app.use(authRouter);
 app.use(adminRouter);
 app.use(productRouter);
