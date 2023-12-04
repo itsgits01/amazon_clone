@@ -46,7 +46,6 @@ mongoose.connect(DB).then(()=>{
 //     res.json({name:'Gitesh K. Ambre'}) 
 // });
 
-app.get('/favicon.ico', (req, res) => res.status(204));
 
 app.listen(PORT,'0.0.0.0',()=>{
     console.log(`connected at port ${PORT}`);
